@@ -1,0 +1,16 @@
+.filters__form{
+    background-color: lightgray;
+    text-align: center;
+    padding: 1vw;
+    border-bottom: gray 1px solid;
+    margin-top: 1vw;
+}
+
+.book{
+    margin-left: 2vw;
+}
+
+.book__type, .print__type{
+    border-radius: 5px;
+    margin-left: 2px;
+}

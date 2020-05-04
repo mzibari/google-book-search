@@ -1,0 +1,10 @@
+form {
+    text-align: center;
+    background-color: rgb(177, 177, 177);
+    padding-top: 1.5vw;
+}
+
+.term__input {
+    border-radius: 5px;
+    margin-left: 2px;
+}

@@ -1,0 +1,18 @@
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.book__section{
+    display: flex;
+}
+
+.book__cover{
+    flex:1;
+}
+
+.book__info{
+    flex:3;
+    text-align: center;
+    font-size: 30px;
+}
