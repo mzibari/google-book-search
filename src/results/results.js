@@ -5,23 +5,25 @@ import './results.css';
 class Results extends Component {
     getBooksInfo() {
         let booksInfo;
-        if (!this.props.response) {
+        const response = this.props.response || { items: [] };
+        console.log(response);
+        if (this.props.response) {
             for (let i = 0; i < 6; i++) {
                 return (
                     <div>
-                        <h2 className="book__title">{this.props.response.items[i].volumeInfo.title.toString()}</h2>
+                        <h2 className="book__title">{response.items[i].volumeInfo.title.toString()}</h2>
                         <section className="book__section">
-                            <img className="book__cover" alt="book cover" src={this.props.response.items[i].volumeInfo.imageLinks.smallThumbnail.toString()} />
+                            <img className="book__cover" alt="book cover" src={response.items[i].volumeInfo.imageLinks.smallThumbnail.toString()} />
                             <div className="book__info">
-                                <span className="author">{this.props.response.items[i].volumeInfo.authors[0].toString()}</span>
-                                <p className="description">{this.props.response.items[i].volumeInfo.description.toString()}</p>
+                                <span className="author">{response.items[i].volumeInfo.authors[0].toString()}</span>
+                                <p className="description">{response.items[i].volumeInfo.description.toString()}</p>
                             </div>
                         </section>
                     </div>
                 );
             }
 
-            /* booksInfo = this.props.response.items.map((book) => {
+            booksInfo = this.props.response.items.map((book) => {
                 return (
                     <div>
                         <h2 className="book__title">{book.volumeInfo.title.toString()}</h2>
@@ -34,7 +36,7 @@ class Results extends Component {
                         </section>
                     </div>
                 );
-            }); */
+            });
         }
         return booksInfo;
     }
